@@ -3,11 +3,6 @@ import localFont from "next/font/local";
 const HalveticaNeue = localFont({
   src: [
     {
-      path: "../../app/_fonts/Helvetica_Neue/Light.ttf",
-      style: "normal",
-      weight: "300",
-    },
-    {
       path: "../../app/_fonts/Helvetica_Neue/Regular.otf",
       style: "normal",
       weight: "400",
