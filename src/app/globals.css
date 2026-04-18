@@ -6,5 +6,18 @@
 
 body {
   background: var(--background);
+  font-family: var(--font-sf-pro-display);
+  font-weight: 400;
+}
+
+@utility use--font-sf-pro-display {
+  font-family: var(--font-sf-pro-display);
+}
+
+@utility use--font-sf-pro-text {
+  font-family: var(--font-sf-pro-text);
+}
+
+@utility use--font-halvetica-neue {
   font-family: var(--font-halvetica-neue);
 }
