@@ -2,12 +2,27 @@
 
 :root {
   --background: #ffffff;
+  --color-black-1: #1d1d1f;
+  --color-grey-1: #f9f9f9;
+  --color-blue-1: #0066cc;
+  --color-blue-2: #0071e3;
+
+  --max-container: 120rem;
 }
 
 body {
   background: var(--background);
   font-family: var(--font-sf-pro-display);
   font-weight: 400;
+}
+
+@theme {
+  --color-black-1: var(--color-black-1);
+  --color-grey-1: var(--color-grey-1);
+  --color-blue-1: var(--color-blue-1);
+  --color-blue-2: var(--color-blue-2);
+
+  --spacing-max-container: var(--max-container);
 }
 
 @utility use--font-sf-pro-display {
@@ -20,4 +35,9 @@ body {
 
 @utility use--font-halvetica-neue {
   font-family: var(--font-halvetica-neue);
+}
+
+@utility use--max-container-boundary {
+  max-width: var(--max-container);
+  margin: 0 auto;
 }
