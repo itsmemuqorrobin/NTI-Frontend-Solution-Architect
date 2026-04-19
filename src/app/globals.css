@@ -9,6 +9,7 @@
   --color-blue-2: #0071e3;
 
   --max-container: 120rem;
+  --size-of-navbar-to-main: 10.625rem;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
   --color-blue-2: var(--color-blue-2);
 
   --spacing-max-container: var(--max-container);
-  --spacing-size-of-navbar-to-main: 10.625rem;
+  --spacing-size-of-navbar-to-main: var(--size-of-navbar-to-main);
 }
 
 @utility use--font-sf-pro-display {
