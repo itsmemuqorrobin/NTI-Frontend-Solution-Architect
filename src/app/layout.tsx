@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { localFonts } from "@/_lib/NextFonts/fonts";
-import { Wrapper } from "./wrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +17,7 @@ export default function RootLayout({
       lang="en"
       className={`${localFonts.HalveticaNeue} ${localFonts.SFProDisplay} ${localFonts.SFProText} h-full antialiased `}
     >
-      <body className="min-h-full flex flex-col">
-        <Wrapper>{children}</Wrapper>
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

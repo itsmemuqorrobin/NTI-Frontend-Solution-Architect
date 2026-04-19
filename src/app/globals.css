@@ -24,6 +24,7 @@ body {
   --color-blue-2: var(--color-blue-2);
 
   --spacing-max-container: var(--max-container);
+  --spacing-size-of-navbar-to-main: 10.625rem;
 }
 
 @utility use--font-sf-pro-display {
