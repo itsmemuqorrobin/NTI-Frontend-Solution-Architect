@@ -11,7 +11,7 @@ import { use, useRef } from "react";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-export function Hero() {
+export function HeroSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const airpodsLeft = useRef<HTMLImageElement | null>(null);
   const airpodsRight = useRef<HTMLImageElement | null>(null);
