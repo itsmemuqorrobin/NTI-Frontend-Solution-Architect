@@ -11,7 +11,7 @@ export function NavbarList() {
           width={12}
           height={14}
           alt="Apple"
-          className="mt-[-2px]"
+          className="mt-[-2px] w-auto h-auto"
         />
       </Link>
 
