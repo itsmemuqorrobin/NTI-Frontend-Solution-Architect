@@ -22,7 +22,7 @@ export function HeroSection() {
         scrollTrigger: {
           trigger: ".container-animate",
           start: "bottom bottom",
-          markers: true,
+          //   markers: true,
           scrub: true,
           pin: true,
           onLeave: () => {
