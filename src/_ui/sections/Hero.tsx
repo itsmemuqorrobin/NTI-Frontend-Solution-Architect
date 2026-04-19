@@ -88,6 +88,7 @@ export function HeroSection() {
           </div>
         </div>
 
+        {/* Images */}
         <div className="absolute top-0 left-0 right-0 bottom-0 z-1">
           <Image
             src={"/images/illustrations/hero_airpods_left.svg"}

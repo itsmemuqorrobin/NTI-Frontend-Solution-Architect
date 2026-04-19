@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -19,14 +20,15 @@ export function AirpodsMaxSection() {
         scrollTrigger: {
           trigger: ".airpodsmax-container-animate",
           start: "top bottom",
-          markers: true,
+          //   markers: true,
           scrub: true,
         },
       });
 
       tlAirpodsMax
         .to(".title-animate", { y: -200, duration: 1 }, 0)
-        .to(".price-animate", { y: -200, duration: 1 }, 0);
+        .to(".price-animate", { y: -200, duration: 1 }, 0)
+        .to(".airpodsmax-animate ", { y: -200, duration: 1 }, 0);
     },
     { scope: containerRef },
   );
@@ -61,7 +63,16 @@ export function AirpodsMaxSection() {
         </div>
 
         {/* Images */}
-        <div></div>
+        <div className="absolute w-[500px] h-[300px]  top-0 left-0 right-0 bottom-0 z-3   mx-auto">
+          <Image
+            src={"/images/illustrations/airpods_max.svg"}
+            alt="AirPods Max"
+            width={200}
+            height={200}
+            className=" w-auto h-auto absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[60px] airpodsmax-animate  "
+            loading="lazy"
+          />
+        </div>
       </section>
     </section>
   );
