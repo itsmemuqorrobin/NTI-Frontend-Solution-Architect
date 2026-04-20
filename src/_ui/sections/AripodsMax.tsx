@@ -29,7 +29,26 @@ export function AirpodsMaxSection() {
         .to(".title-animate", { y: -200, duration: 1 }, 0)
         .to(".price-animate", { y: -200, duration: 1 }, 0)
         .to(".airpodsmax-animate ", { y: -200, duration: 1 }, 0);
+
+      const tlAirPodsMaxScrollInSection = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".airpodsmax-container-animate",
+          start: "bottom bottom",
+          markers: true,
+          scrub: 1.5,
+          pin: true,
+        },
+      });
+
+      tlAirPodsMaxScrollInSection
+        .to(".title-animate", { scale: 0.7, fontSize: "123px", duration: 1 }, 0)
+        .to(
+          ".airpodsmax-animate ",
+          { scale: 1.2, y: -500, duration: 1, filter: "blur(12px)" },
+          0,
+        );
     },
+
     { scope: containerRef },
   );
 
