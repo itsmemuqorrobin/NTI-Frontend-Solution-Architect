@@ -44,7 +44,13 @@ export function AirpodsMaxSection() {
         .to(".title-animate", { scale: 0.7, fontSize: "123px", duration: 1 }, 0)
         .to(
           ".airpodsmax-animate ",
-          { scale: 1.2, y: -500, duration: 1, filter: "blur(12px)" },
+          {
+            scale: 1.2,
+            y: -500,
+            duration: 1,
+            filter: "blur(12px)",
+            immediateRender: false,
+          },
           0,
         );
     },
@@ -88,7 +94,7 @@ export function AirpodsMaxSection() {
             alt="AirPods Max"
             width={200}
             height={200}
-            className=" w-auto h-auto absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[60px] airpodsmax-animate  "
+            className=" w-auto h-auto absolute top-1/2 translate-y-[60px] airpodsmax-animate  "
             loading="lazy"
           />
         </div>
