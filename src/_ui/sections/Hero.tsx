@@ -25,12 +25,6 @@ export function HeroSection() {
           //   markers: true,
           scrub: true,
           pin: true,
-          onLeave: () => {
-            airpodsLeft.current?.classList.add("blur-[3px]");
-          },
-          onEnterBack: () => {
-            airpodsLeft.current?.classList.remove("blur-[3px]");
-          },
         },
       });
 
@@ -42,14 +36,14 @@ export function HeroSection() {
       )
         .fromTo(
           ".airpods-left-animate",
-          { scale: 0.5, x: -100, filter: "blur(0)" },
-          { scale: 2, x: 320, filter: "blur(.5px)" },
+          { scale: 0.5, x: -100 },
+          { scale: 2, x: 320, filter: "blur(1.5px)" },
           0,
         )
         .fromTo(
           ".airpods-right-animate",
-          { scale: 0, x: 100, filter: "blur(0)" },
-          { scale: 3, x: -320, filter: "blur(.5px)" },
+          { scale: 0, x: 100 },
+          { scale: 3, x: -320, filter: "blur(1.5px)" },
           0,
         );
     },
