@@ -250,6 +250,8 @@ export const ComparationAirpodsList: IAirpodsComparation[] = [
     price: "₹14900.00*",
     buyHref: "/",
     learnMoreHref: "/",
+    width: 120,
+    heigth: 160,
   },
   {
     id: 2,
@@ -259,6 +261,8 @@ export const ComparationAirpodsList: IAirpodsComparation[] = [
     price: "From ₹19900.00*",
     buyHref: "/",
     learnMoreHref: "/",
+    width: 149,
+    heigth: 144,
   },
   {
     id: 3,
@@ -268,6 +272,8 @@ export const ComparationAirpodsList: IAirpodsComparation[] = [
     price: "₹26900.00*",
     buyHref: "/",
     learnMoreHref: "/",
+    width: 165,
+    heigth: 140,
   },
   {
     id: 4,
@@ -277,5 +283,7 @@ export const ComparationAirpodsList: IAirpodsComparation[] = [
     price: "₹59900.00*",
     buyHref: "/",
     learnMoreHref: "/",
+    width: 212,
+    heigth: 235,
   },
 ];

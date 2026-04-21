@@ -35,8 +35,8 @@ export function CompareAirpodsSection() {
                   <Image
                     alt={item.title}
                     src={item.imageURL}
-                    width={120}
-                    height={150}
+                    width={item.width}
+                    height={item.heigth}
                     className="mx-auto"
                   />
                 </figure>

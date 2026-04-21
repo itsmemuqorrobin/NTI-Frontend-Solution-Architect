@@ -36,4 +36,6 @@ export interface IAirpodsComparation {
   price: string;
   buyHref: string;
   learnMoreHref: string;
+  width: number;
+  heigth: number;
 }
