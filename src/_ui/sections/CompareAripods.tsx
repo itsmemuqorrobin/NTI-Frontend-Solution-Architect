@@ -12,20 +12,47 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { AirpodsFeatureComponent } from "../components/AirpodsFeature";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export function CompareAirpodsSection() {
   const containerRef = useRef<HTMLElement | null>(null);
+
+  useGSAP(
+    () => {
+      const tlAirpodsMax = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".compare-container-animate",
+          start: "10% bottom",
+          end: "center center",
+          //   markers: true,
+          scrub: true,
+        },
+      });
+
+      tlAirpodsMax
+        .to(".title-animate", { y: -100, duration: 1 }, 0)
+        .to(".compare-airpods-animate", { y: -100, duration: 1 }, 0);
+    },
+
+    { scope: containerRef },
+  );
+
   return (
     <section ref={containerRef} className="relative">
-      <div className="bg-grey-1 h-auto min-h-screen pt-12 pb-20">
+      <div className="bg-grey-1 h-auto min-h-screen pt-12 pb-20 compare-container-animate ">
         <div className="mx-auto text-center mt-20">
-          <h3 className="use--font-sf-pro-display text-black-1 font-bold text-[64px] leading-[64px]">
+          <h3 className="use--font-sf-pro-display text-black-1 font-bold text-[64px] leading-[64px] title-animate translate-y-[200px]">
             Which AirPods are <br /> right for you?
           </h3>
         </div>
 
         <div
-          className="mt-20 mx-auto  px-size-of-padding-x gap-x-8.5 gap-y-10 items-baseline compare-grid"
+          className="mt-20 mx-auto  px-size-of-padding-x gap-x-8.5 gap-y-10 items-baseline compare-grid compare-airpods-animate translate-y-[200px]"
           aria-label="Airpods Comparison"
         >
           {ComparationAirpodsList.map((item) => {

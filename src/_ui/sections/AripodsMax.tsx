@@ -35,7 +35,7 @@ export function AirpodsMaxSection() {
         scrollTrigger: {
           trigger: ".airpodsmax-container-animate",
           start: "bottom bottom",
-          markers: true,
+          //   markers: true,
           scrub: 1.5,
           pin: true,
         },
