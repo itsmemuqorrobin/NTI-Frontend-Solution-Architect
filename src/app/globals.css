@@ -5,11 +5,13 @@
   --color-black-1: #1d1d1f;
   --color-grey-1: #f9f9f9;
   --color-grey-2: #000000cc;
+  --color-grey-3: #d2d2d7;
   --color-blue-1: #0066cc;
   --color-blue-2: #0071e3;
 
   --max-container: 120rem;
   --size-of-navbar-to-main: 10.625rem;
+  --size-of-x-padding: 20rem;
 }
 
 body {
@@ -18,14 +20,38 @@ body {
   font-weight: 400;
 }
 
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.airpods-2nd-features {
+  grid-column: 1;
+}
+
+.airpods-3rd-features {
+  grid-column: 2;
+}
+
+.airpods-pro {
+  grid-column: 3;
+}
+
+.airpods-max {
+  grid-column: 4;
+}
+
 @theme {
   --color-black-1: var(--color-black-1);
   --color-grey-1: var(--color-grey-1);
+  --color-grey-2: var(--color-grey-2);
+  --color-grey-3: var(--color-grey-3);
   --color-blue-1: var(--color-blue-1);
   --color-blue-2: var(--color-blue-2);
 
   --spacing-max-container: var(--max-container);
   --spacing-size-of-navbar-to-main: var(--size-of-navbar-to-main);
+  --spacing-size-of-padding-x: var(--size-of-x-padding);
 }
 
 @utility use--font-sf-pro-display {

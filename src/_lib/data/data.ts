@@ -1,4 +1,12 @@
-export const NavbarLinks = [
+import {
+  IAirpodFeatures,
+  IAirpodsComparation,
+  IHeadInfo,
+  INavbarLinks,
+} from "../utils/interfaces";
+import { ComparisonIconURL, ComparisonImageURL } from "../utils/variables";
+
+export const NavbarLinks: INavbarLinks[] = [
   {
     id: 1,
     name: "Store",
@@ -51,7 +59,7 @@ export const NavbarLinks = [
   },
 ];
 
-export const HeadInfoList = [
+export const HeadInfoList: IHeadInfo[] = [
   {
     id: 1,
     title: "AirPods\n2nd Generation",
@@ -99,5 +107,175 @@ export const HeadInfoList = [
     href: "/",
     width: 32,
     height: 32,
+  },
+];
+
+export const Airpods2ndGenFeatures: IAirpodFeatures[] = [
+  {
+    id: "1",
+    description: "—",
+    imageURL: null,
+  },
+  {
+    id: "2",
+    description: "—",
+    imageURL: null,
+  },
+  {
+    id: "3",
+    description: "Personalized Spatial Audio with dynamic head tracking",
+    imageURL: `${ComparisonIconURL}spatial_icon.png`,
+  },
+  {
+    id: "4",
+    description: "—",
+    imageURL: null,
+  },
+  {
+    id: "5",
+    description: "—",
+    imageURL: null,
+  },
+];
+
+export const Airpods3RdGenFeatures: IAirpodFeatures[] = [
+  {
+    id: "1",
+    description: "Personalized Spatial Audio with dynamic head tracking",
+    imageURL: `${ComparisonIconURL}spatial_icon.png`,
+    isHasSup: true,
+  },
+  {
+    id: "2",
+    description: "—",
+    imageURL: null,
+  },
+  {
+    id: "3",
+    description: "Personalized Spatial Audio with dynamic head tracking",
+    imageURL: `${ComparisonIconURL}spatial_icon.png`,
+  },
+  {
+    id: "4",
+    description: "—",
+    imageURL: null,
+  },
+  {
+    id: "5",
+    description: "—",
+    imageURL: null,
+  },
+];
+
+export const AirpodsProFeatures: IAirpodFeatures[] = [
+  {
+    id: "1",
+    description: "Personalized Spatial Audio with dynamic head tracking",
+    imageURL: `${ComparisonIconURL}spatial_icon.png`,
+    isHasSup: true,
+  },
+  {
+    id: "2",
+    description: "Active Noise Cancellation and Adaptive Transparency",
+    imageURL: `${ComparisonIconURL}active_noise_icon.png`,
+    isDoubleImage: true,
+    imageURL2: `${ComparisonIconURL}active_cancellation.png`,
+    size: {
+      image1Width: 26,
+      image1Height: 34,
+      image2Height: 34,
+      image2Width: 26,
+    },
+  },
+  {
+    id: "3",
+    description: "Personalized Spatial Audio with dynamic head tracking",
+    imageURL: `${ComparisonIconURL}spatial_icon.png`,
+  },
+  {
+    id: "4",
+    description: "—",
+    imageURL: null,
+  },
+  {
+    id: "5",
+    description: "—",
+    imageURL: null,
+  },
+];
+
+export const AirpodsMaxFeatuers: IAirpodFeatures[] = [
+  {
+    id: "1",
+    description: "Personalized Spatial Audio with dynamic head tracking",
+    imageURL: `${ComparisonIconURL}spatial_icon.png`,
+    isHasSup: true,
+  },
+  {
+    id: "2",
+    description: "Active Noise Cancellation and Adaptive Transparency",
+    imageURL: `${ComparisonIconURL}active_noise_icon.png`,
+    isDoubleImage: true,
+    imageURL2: `${ComparisonIconURL}active_cancellation.png`,
+    size: {
+      image1Width: 26,
+      image1Height: 34,
+      image2Height: 34,
+      image2Width: 26,
+    },
+  },
+  {
+    id: "3",
+    description: "Personalized Spatial Audio with dynamic head tracking",
+    imageURL: `${ComparisonIconURL}spatial_icon.png`,
+  },
+  {
+    id: "4",
+    description: "—",
+    imageURL: null,
+  },
+  {
+    id: "5",
+    description: "—",
+    imageURL: null,
+  },
+];
+
+export const ComparationAirpodsList: IAirpodsComparation[] = [
+  {
+    id: 1,
+    imageURL: `${ComparisonImageURL}airpods-2nd-gen.png`,
+    title: "AirPods",
+    subTitle: "2nd generation",
+    price: "₹14900.00*",
+    buyHref: "/",
+    learnMoreHref: "/",
+  },
+  {
+    id: 2,
+    imageURL: `${ComparisonImageURL}airpods-3rd-gen.png`,
+    title: "AirPods",
+    subTitle: "3rd generation",
+    price: "From ₹19900.00*",
+    buyHref: "/",
+    learnMoreHref: "/",
+  },
+  {
+    id: 3,
+    imageURL: `${ComparisonImageURL}airpods-pro.png`,
+    title: "AirPods Pro",
+    subTitle: "2nd generation",
+    price: "₹26900.00*",
+    buyHref: "/",
+    learnMoreHref: "/",
+  },
+  {
+    id: 4,
+    imageURL: `${ComparisonImageURL}airpods-max.png`,
+    title: "AirPods Max",
+    subTitle: "",
+    price: "₹59900.00*",
+    buyHref: "/",
+    learnMoreHref: "/",
   },
 ];
