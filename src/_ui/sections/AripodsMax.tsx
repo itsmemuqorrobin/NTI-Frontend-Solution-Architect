@@ -1,5 +1,6 @@
 "use client";
 
+import { IllustrationImageURL } from "@/_lib/utils/variables";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -90,7 +91,7 @@ export function AirpodsMaxSection() {
         {/* Images */}
         <div className="absolute w-[500px] h-[300px]  top-0 left-0 right-0 bottom-0 z-3   mx-auto">
           <Image
-            src={"/images/illustrations/airpods_max.svg"}
+            src={`${IllustrationImageURL}airpods_max.svg`}
             alt="AirPods Max"
             width={200}
             height={200}

@@ -1,5 +1,6 @@
 "use client";
 
+import { IllustrationImageURL } from "@/_lib/utils/variables";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -85,7 +86,7 @@ export function HeroSection() {
         {/* Images */}
         <div className="absolute top-0 left-0 right-0 bottom-0 z-1">
           <Image
-            src={"/images/illustrations/hero_airpods_left.svg"}
+            src={`${IllustrationImageURL}hero_airpods_left.svg`}
             alt="AirPods Left"
             width={400}
             height={800}
@@ -95,7 +96,7 @@ export function HeroSection() {
           />
 
           <Image
-            src={"/images/illustrations/hero_airpods_right.svg"}
+            src={`${IllustrationImageURL}hero_airpods_right.svg`}
             alt="AirPods Right"
             width={200}
             height={600}
