@@ -13,7 +13,7 @@ export function AirpodsFeatureComponent({
           <figure className="" aria-label="illustration 1">
             <Image
               alt={feature.description}
-              src={feature.imageURL}
+              src={feature.imageURL as string}
               width={feature.size?.image1Width || 38}
               height={feature.size?.image1Height || 38}
               className="mx-auto"
@@ -22,7 +22,7 @@ export function AirpodsFeatureComponent({
           <figure className="" aria-label="illustration 2">
             <Image
               alt={feature.description}
-              src={feature.imageURL2}
+              src={feature.imageURL2 as string}
               width={feature.size?.image2Width || 38}
               height={feature.size?.image1Height || 38}
               className="mx-auto"
@@ -37,7 +37,7 @@ export function AirpodsFeatureComponent({
             <figure className="mx-auto">
               <Image
                 alt={feature.description}
-                src={feature.imageURL}
+                src={feature.imageURL as string}
                 width={feature.size?.image1Width || 38}
                 height={feature.size?.image1Height || 38}
                 className="mx-auto"
