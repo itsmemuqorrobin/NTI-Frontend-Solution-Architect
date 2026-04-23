@@ -25,7 +25,7 @@ export function AirpodsMaxSection() {
           isUltraWide: "(min-width: 120rem)",
         },
         (context) => {
-          const { isUltraWide, isDesktop } = context.conditions;
+          const { isUltraWide, isDesktop } = context.conditions ?? {};
 
           const tlAirpodsMax = gsap.timeline({
             scrollTrigger: {
@@ -69,7 +69,7 @@ export function AirpodsMaxSection() {
           isUltraWide: "(min-width: 120rem)",
         },
         (context) => {
-          const { isUltraWide, isDesktop } = context.conditions;
+          const { isUltraWide, isDesktop } = context.conditions ?? {};
 
           const tlAirPodsMaxScrollInSection = gsap.timeline({
             scrollTrigger: {

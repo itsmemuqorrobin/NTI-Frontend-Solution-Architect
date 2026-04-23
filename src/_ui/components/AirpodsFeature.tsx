@@ -48,7 +48,9 @@ export function AirpodsFeatureComponent({
       )}
 
       <div className="text-center mt-3 ">
-        <p className="use--font-halvetica-neue  text-sm text-black-1  font-normal">
+        <p
+          className={`use--font-halvetica-neue  text-sm text-black-1  font-normal px-6`}
+        >
           {" "}
           {feature.description}{" "}
           {feature.isHasSup ? (

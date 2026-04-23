@@ -27,7 +27,7 @@ export function HeroSection() {
           isUltraWide: "(min-width: 120rem)",
         },
         (context) => {
-          const { isUltraWide, isDesktop } = context.conditions;
+          const { isUltraWide, isDesktop } = context.conditions ?? {};
 
           const tl = gsap.timeline({
             scrollTrigger: {
