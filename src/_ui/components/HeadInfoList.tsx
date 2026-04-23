@@ -4,7 +4,10 @@ import Link from "next/link";
 
 export function HeadInfoListComponent() {
   return (
-    <div className="flex items-baseline justify-center gap-8 mt-8">
+    <header
+      role="navigation"
+      className="flex items-baseline justify-center gap-8 mt-8"
+    >
       {HeadInfoList.map((item) => {
         return (
           <Link
@@ -26,6 +29,6 @@ export function HeadInfoListComponent() {
           </Link>
         );
       })}
-    </div>
+    </header>
   );
 }

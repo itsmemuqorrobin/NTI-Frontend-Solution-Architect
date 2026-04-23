@@ -72,7 +72,7 @@ export function HeroSection() {
   );
 
   return (
-    <section ref={sectionRef} className="relative">
+    <main role="main" ref={sectionRef} className="relative">
       <section className="bg-grey-1 h-[calc(100vh-var(--spacing-size-of-navbar-to-main))]  z-5 flex items-center justify-center container-animate relative overflow-hidden ">
         <div className="text-center z-2">
           <h1 className="use--font-sf-pro-display text-black-1 font-bold text-[123px] airpods-text-animate">
@@ -126,6 +126,6 @@ export function HeroSection() {
           />
         </div>
       </section>
-    </section>
+    </main>
   );
 }

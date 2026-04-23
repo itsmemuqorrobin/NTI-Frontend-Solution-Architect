@@ -43,12 +43,12 @@ export function CompareAirpodsSection() {
   );
 
   return (
-    <section ref={containerRef} className="relative">
+    <main role="main" ref={containerRef} className="relative">
       <div className="bg-grey-1 h-auto min-h-screen pt-12 pb-20 compare-container-animate ">
         <div className="mx-auto text-center mt-20">
-          <h3 className="use--font-sf-pro-display text-black-1 font-bold text-[64px] leading-[64px] title-animate translate-y-[200px]">
+          <h1 className="use--font-sf-pro-display text-black-1 font-bold text-[64px] leading-[64px] title-animate translate-y-[200px]">
             Which AirPods are <br /> right for you?
-          </h3>
+          </h1>
         </div>
 
         <div
@@ -70,13 +70,13 @@ export function CompareAirpodsSection() {
 
                 <div className="mx-auto mt-8.5 h-[97px] flex flex-col text-center justify-between ">
                   <div>
-                    <h3 className="use--font-sf-pro-display font-bold text-[23px] text-black-1">
+                    <h2 className="use--font-sf-pro-display font-bold text-[23px] text-black-1">
                       {item.title}{" "}
-                    </h3>
-                    <h4 className="use--font-halvetica-neue font-normal text-black-1 text-[14px] ">
+                    </h2>
+                    <h3 className="use--font-halvetica-neue font-normal text-black-1 text-[14px] ">
                       {" "}
                       {item.subTitle}{" "}
-                    </h4>
+                    </h3>
                   </div>
                   <div className="text-center " aria-label="Airpods Status">
                     <p className="use--font-halvetica-neue font-normal text-black-1 text-[17px] ">
@@ -157,6 +157,6 @@ export function CompareAirpodsSection() {
           })}
         </div>
       </div>
-    </section>
+    </main>
   );
 }

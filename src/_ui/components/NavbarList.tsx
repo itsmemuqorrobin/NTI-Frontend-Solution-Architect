@@ -4,7 +4,10 @@ import Link from "next/link";
 
 export function NavbarList() {
   return (
-    <div className="flex items-stretch gap-8 justify-center mt-4">
+    <nav
+      role="navigation"
+      className="flex items-stretch gap-8 justify-center mt-4"
+    >
       <Link href={"/"} className="text-xs text-grey-2 use--font-sf-pro-text">
         <Image
           src={"/apple_logo.svg"}
@@ -46,6 +49,6 @@ export function NavbarList() {
           className=""
         />
       </Link>
-    </div>
+    </nav>
   );
 }

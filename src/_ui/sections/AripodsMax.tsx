@@ -110,7 +110,7 @@ export function AirpodsMaxSection() {
   );
 
   return (
-    <section ref={containerRef} className="relative">
+    <main role="main" ref={containerRef} className="relative">
       <section className="h-[calc(100vh-var(--spacing-size-of-navbar-to-main))]  z-5 flex items-center justify-center relative overflow-hidden airpodsmax-container-animate ">
         <div className="text-center z-2 ">
           <h1 className="use--font-sf-pro-display text-black-1 font-bold text-[180px] airpods-text-animate title-animate translate-y-[300px] ultrawide:text-[240px]">
@@ -150,6 +150,6 @@ export function AirpodsMaxSection() {
           />
         </div>
       </section>
-    </section>
+    </main>
   );
 }
