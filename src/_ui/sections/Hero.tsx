@@ -19,34 +19,54 @@ export function HeroSection() {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".container-animate",
-          start: "bottom bottom",
-          //   markers: true,
-          scrub: true,
-          pin: true,
-        },
-      });
+      const mm = gsap.matchMedia();
 
-      tl.fromTo(
-        ".airpods-text-animate",
-        { scale: 1, fontSize: "123px" },
-        { scale: 0.8, fontSize: "100px" },
-        0,
-      )
-        .fromTo(
-          ".airpods-left-animate",
-          { scale: 0.5, x: -100 },
-          { scale: 2, x: 320, filter: "blur(1.5px)" },
-          0,
-        )
-        .fromTo(
-          ".airpods-right-animate",
-          { scale: 0, x: 100 },
-          { scale: 3, x: -320, filter: "blur(1.5px)" },
-          0,
-        );
+      mm.add(
+        {
+          isDesktop: "(min-width: 64rem)",
+          isUltraWide: "(min-width: 120rem)",
+        },
+        (context) => {
+          const { isUltraWide, isDesktop } = context.conditions;
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".container-animate",
+              start: "bottom bottom",
+              //   markers: true,
+              scrub: true,
+              pin: true,
+            },
+          });
+
+          tl.fromTo(
+            ".airpods-text-animate",
+            { scale: 1, fontSize: "123px" },
+            { scale: 0.8, fontSize: "100px" },
+            0,
+          )
+            .fromTo(
+              ".airpods-left-animate",
+              { scale: 0.5, x: -100 },
+              {
+                scale: isUltraWide ? 2.5 : isDesktop ? 2 : 2,
+                x: isUltraWide ? 600 : isDesktop ? 320 : 320,
+                filter: "blur(1.5px)",
+              },
+              0,
+            )
+            .fromTo(
+              ".airpods-right-animate",
+              { scale: 0, x: 100 },
+              {
+                scale: isUltraWide ? 3.5 : isDesktop ? 3 : 3,
+                x: isUltraWide ? -620 : isDesktop ? -320 : -320,
+                filter: "blur(1.5px)",
+              },
+              0,
+            );
+        },
+      );
     },
     { scope: sectionRef },
   );
@@ -84,13 +104,13 @@ export function HeroSection() {
         </div>
 
         {/* Images */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 z-1">
+        <div className="absolute top-0 left-0 right-0 bottom-0 z-3">
           <Image
             src={`${IllustrationImageURL}hero_airpods_left.svg`}
             alt="AirPods Left"
             width={400}
             height={800}
-            className="h-auto w-auto  absolute top-[23%] right-[10%]  airpods-left-animate  "
+            className="h-auto w-auto ultrawide:h-[820px] ultrawide:w-[419px]  absolute top-[23%] ultrawide:top-[27%] right-[10%] ultrawide:right-[26%]  airpods-left-animate  "
             priority
             ref={airpodsLeft}
           />
@@ -100,7 +120,7 @@ export function HeroSection() {
             alt="AirPods Right"
             width={200}
             height={600}
-            className="h-auto w-auto  absolute top-[10%] left-[10%]  airpods-right-animate  "
+            className="h-auto w-auto ultrawide:h-[992px] ultrawide:w-[420px]  absolute top-[10%] ultrawide:top-[2%] left-[10%] ultrawide:left-[30%] airpods-right-animate  "
             priority
             ref={airpodsRight}
           />

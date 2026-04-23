@@ -52,6 +52,8 @@ body {
   --spacing-max-container: var(--max-container);
   --spacing-size-of-navbar-to-main: var(--size-of-navbar-to-main);
   --spacing-size-of-padding-x: var(--size-of-x-padding);
+
+  --breakpoint-ultrawide: 120rem;
 }
 
 @utility use--font-sf-pro-display {
