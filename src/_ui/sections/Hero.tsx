@@ -111,7 +111,8 @@ export function HeroSection() {
             width={400}
             height={800}
             className="h-auto w-auto ultrawide:h-[820px] ultrawide:w-[419px]  absolute top-[23%] ultrawide:top-[27%] right-[10%] ultrawide:right-[26%]  airpods-left-animate  "
-            priority
+            preload={true}
+            fetchPriority="high"
             ref={airpodsLeft}
           />
 
@@ -121,7 +122,8 @@ export function HeroSection() {
             width={200}
             height={600}
             className="h-auto w-auto ultrawide:h-[992px] ultrawide:w-[420px]  absolute top-[10%] ultrawide:top-[2%] left-[10%] ultrawide:left-[30%] airpods-right-animate  "
-            priority
+            preload={true}
+            fetchPriority="high"
             ref={airpodsRight}
           />
         </div>
