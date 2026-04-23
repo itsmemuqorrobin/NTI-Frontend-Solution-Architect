@@ -8,6 +8,7 @@ const HalveticaNeue = localFont({
       weight: "400",
     },
   ],
+  display: "swap",
   variable: "--font-halvetica-neue",
 });
 
@@ -24,6 +25,7 @@ const SFProDisplay = localFont({
       weight: "700",
     },
   ],
+  display: "swap",
   variable: "--font-sf-pro-display",
 });
 
@@ -35,6 +37,7 @@ const SFProText = localFont({
       weight: "400",
     },
   ],
+  display: "swap",
   variable: "--font-sf-pro-text",
 });
 
